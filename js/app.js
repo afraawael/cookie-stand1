@@ -17,16 +17,18 @@ cookiesPerHour :[],
     for (let i=0;i<hours.length;i++){
      this.randomCusPerHour[i] = randomValue(this.minCus,this.maxCus)
     };
-    console.log('number of customers per hour is',`${this.randomCusPerHour}`);
+    
    },
 
    getcookiesInHour: function(){
+       let val =0;
+       val=randomValue(this.minCus, this.maxCus);
     for (let i=0; i<this.randomCusPerHour.length; i++){
         this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+        this.total=this.total+val
     };
 
-    console.log('Average Cookies Per Hour is',`${this.cookiesPerHour}`);
-   },
+  },
 
 
    table: function(){
@@ -43,8 +45,10 @@ cookiesPerHour :[],
         li.textContent=  `${hours[i]} : ${this.cookiesPerHour[i]}`;
 
     }
-
-   }
+    let totalLiItem = document.createElement('li');
+        list.appendChild(totalLiItem);
+        totalLiItem.textContent = 'Total :' + this.total + ' Cookies';
+    }
 }
 
 
@@ -52,6 +56,7 @@ cookiesPerHour :[],
 seattle.getcustumernumber();
 seattle.getcookiesInHour();
 seattle.table();
+console.log(seattle);
 
 
 function randomValue(min, max) {
@@ -74,15 +79,16 @@ cookiesPerHour :[],
     for (let i=0;i<hours.length;i++){
      this.randomCusPerHour[i] = randomValue(this.minCus,this.maxCus)
     };
-    console.log('number of customers per hour is',`${this.randomCusPerHour}`);
    },
 
    getcookiesInHour: function(){
-    for (let i=0; i<this.randomCusPerHour.length; i++){
-        this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+    let val =0;
+    val=randomValue(this.minCus, this.maxCus);
+ for (let i=0; i<this.randomCusPerHour.length; i++){
+     this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+     this.total=this.total+val
     };
 
-    console.log('Average Cookies Per Hour is',`${this.cookiesPerHour}`);
    },
 
 
@@ -100,7 +106,9 @@ cookiesPerHour :[],
         li.textContent=  `${hours[i]} : ${this.cookiesPerHour[i]}`;
 
     }
-
+    let totalLiItem = document.createElement('li');
+    list.appendChild(totalLiItem);
+    totalLiItem.textContent = 'Total :' + this.total + ' Cookies';
    }
 }
 
@@ -109,6 +117,7 @@ cookiesPerHour :[],
 tokyo.getcustumernumber();
 tokyo.getcookiesInHour();
 tokyo.table();
+console.log(tokyo);
 
 
 
@@ -125,15 +134,16 @@ const dubai = {
         for (let i=0;i<hours.length;i++){
          this.randomCusPerHour[i] = randomValue(this.minCus,this.maxCus)
         };
-        console.log('number of customers per hour is',`${this.randomCusPerHour}`);
        },
     
        getcookiesInHour: function(){
-        for (let i=0; i<this.randomCusPerHour.length; i++){
-            this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+        let val =0;
+        val=randomValue(this.minCus, this.maxCus);
+     for (let i=0; i<this.randomCusPerHour.length; i++){
+         this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+         this.total=this.total+val
         };
     
-        console.log('Average Cookies Per Hour is',`${this.cookiesPerHour}`);
        },
     
     
@@ -151,7 +161,9 @@ const dubai = {
             li.textContent=  `${hours[i]} : ${this.cookiesPerHour[i]}`;
     
         }
-    
+        let totalLiItem = document.createElement('li');
+        list.appendChild(totalLiItem);
+        totalLiItem.textContent = 'Total :' + this.total + ' Cookies';
        }
     }
     
@@ -160,6 +172,7 @@ const dubai = {
     dubai.getcustumernumber();
     dubai.getcookiesInHour();
     dubai.table();
+    console.log(dubai);
 
 
 
@@ -178,15 +191,16 @@ const paris = {
         for (let i=0;i<hours.length;i++){
          this.randomCusPerHour[i] = randomValue(this.minCus,this.maxCus)
         };
-        console.log('number of customers per hour is',`${this.randomCusPerHour}`);
        },
     
        getcookiesInHour: function(){
-        for (let i=0; i<this.randomCusPerHour.length; i++){
-            this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+        let val =0;
+        val=randomValue(this.minCus, this.maxCus);
+     for (let i=0; i<this.randomCusPerHour.length; i++){
+         this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+         this.total=this.total+val
         };
     
-        console.log('Average Cookies Per Hour is',`${this.cookiesPerHour}`);
        },
     
     
@@ -204,7 +218,9 @@ const paris = {
             li.textContent=  `${hours[i]} : ${this.cookiesPerHour[i]}`;
     
         }
-    
+        let totalLiItem = document.createElement('li');
+        list.appendChild(totalLiItem);
+        totalLiItem.textContent = 'Total :' + this.total + ' Cookies';
        }
     }
     
@@ -213,6 +229,7 @@ const paris = {
     paris.getcustumernumber();
     paris.getcookiesInHour();
     paris.table();
+    console.log(paris);
 
 
         
@@ -229,15 +246,16 @@ const lima = {
         for (let i=0;i<hours.length;i++){
          this.randomCusPerHour[i] = randomValue(this.minCus,this.maxCus)
         };
-        console.log('number of customers per hour is',`${this.randomCusPerHour}`);
        },
     
        getcookiesInHour: function(){
-        for (let i=0; i<this.randomCusPerHour.length; i++){
-            this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+        let val =0;
+        val=randomValue(this.minCus, this.maxCus);
+     for (let i=0; i<this.randomCusPerHour.length; i++){
+         this.cookiesPerHour[i]=Math.floor(this.randomCusPerHour[i]*this.Avg)
+         this.total=this.total+val
         };
     
-        console.log('Average Cookies Per Hour is',`${this.cookiesPerHour}`);
        },
     
     
@@ -255,7 +273,9 @@ const lima = {
             li.textContent=  `${hours[i]} : ${this.cookiesPerHour[i]}`;
     
         }
-    
+        let totalLiItem = document.createElement('li');
+        list.appendChild(totalLiItem);
+        totalLiItem.textContent = 'Total :' + this.total + ' Cookies';
        }
     }
     
@@ -264,3 +284,4 @@ const lima = {
     lima.getcustumernumber();
     lima.getcookiesInHour();
     lima.table();
+    console.log(lima);
