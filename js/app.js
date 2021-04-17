@@ -37,6 +37,8 @@ function cookieStand (location,minCus,maxCus,Avg){
           this.total=this.total+this.cookiesPerHour[i];
         }
       };
+
+ 
  
 
     function headerRow(){
@@ -105,8 +107,34 @@ function cookieStand (location,minCus,maxCus,Avg){
 
     
     console.log(shops);
+
+
+    const form = document.getElementById('cookieStand');
+    form.addEventListener ('submit', handleSubmitting);
+
+
+    function handleSubmitting(event){
+      event.preventDefault();
+    let location=event.target.location.value;
+    let min=parseInt(event.target.min.value);
+    let max=parseInt(event.target.max.value);
+    let avg=parseFloat(event.target.avg.value);   
+    let newLocation = new cookieStand(location,min,max,avg);
+
+
+    newLocation.getcustumernumber();
+    newLocation.getcookiesInHour();
+    newLocation.change();
+    newLocation.render();
+    
+    console.log(location);
+  }
     
 
+
+
+  
+  
 // let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm','7pm'];
 // const seattle = {
 // location : 'seattle',
