@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200&family=Karla:ital,wght@0,600;1,600&display=swap');
+* {
+    background-color: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+
+nav ul li {
+    display: inline-block;
+    font-family: 'Antonio', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-align: justify;
+}
